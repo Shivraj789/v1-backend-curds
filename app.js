@@ -36,8 +36,8 @@ const app = express()
 const path = require('path')
 const userModel = require('./models/user.js')
 const { readdir } = require('fs')
-console.log(process.env.myname);
-const PORT = process.env.PORT
+
+const PORT = 3000
 
 app.set('view engine', 'ejs')
 app.use(express.json())     
