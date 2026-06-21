@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/images/javascript/stylesheet/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <div class="w-full h-screen 
+        bg-zinc-900">
+        <div class="nav mb-6">
+            <a href="/read" class="text-blue-300 text-xl font-bold pt-4 pl-4">
+                Read Users  
+            </a>    
+        </div>
+<h1 class="text-white text-2xl mt-2 font-bold pt-4 pl-4">
+    Create a User
+</h1>        <form action="/make" method="POST">
+
+    <input class="px-5 bg-gray-800 text-white p-2 rounded" type="text" name="name" placeholder="name" color="white">
+    <input class="px-5 bg-gray-800 text-white p-2 rounded" type="text" name="email" placeholder="email" color="white">
+    <input class="px-5 bg-gray-800 text-white p-2 rounded" type="text" name="image" placeholder="image url" color="white">
+    <input type="submit" value="Submit" class="px-5 bg-blue-500 text-white p-2 rounded ml-3">
+        </form>
+    </div>
+</body>
+</html>

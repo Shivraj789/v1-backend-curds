@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/images/javascript/stylesheet/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+ <body class="bg-slate-950 min-h-screen">
+
+    <div class="max-w-7xl mx-auto px-6 py-6">
+
+        <a href="/" class="text-blue-400 text-lg font-semibold">
+            ← Back to Home
+        </a>
+
+        <h1 class="text-white text-4xl font-bold mt-4 mb-8">
+            Create a User
+        </h1>
+
+        <div class="users grid grid-cols-4 gap-8">
+
+            <% profile.forEach(function(profiles){ %>
+
+            <div class="w-72 bg-zinc-800 rounded-xl p-4 shadow-lg">
+
+                <div class="w-full h-56 overflow-hidden rounded-lg">
+                    <img
+                        class="w-full h-full object-cover"
+                        src="<%= profiles.image %>"
+                        alt=""
+                    >
+                </div>
+
+                <h3 class="text-white text-2xl mt-4 font-semibold">
+                    <%= profiles.name %>
+                </h3>
+
+                <h5 class="text-gray-400 text-lg">
+                    <%= profiles.email %>
+                </h5>
+
+                <div class="flex justify-between mt-6">
+                    <a class="text-blue-500 hover:text-blue-400"
+                       href="/read">
+                        edit
+                    </a>
+
+                    <a class="text-red-500 hover:text-red-400"
+                       href="/delete/<%= profiles._id %>">
+                        delete
+                    </a>
+                </div>
+
+            </div>
+
+            <% }) %>
+
+        </div>
+
+    </div>
+
+</body>
+</body>
+</html>
